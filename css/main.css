@@ -1,0 +1,377 @@
+@font-face {
+	font-family: 'Bangers';
+	src:url("Bangers-Regular.ttf");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Bangers', cursive;
+	width: 100%;
+	min-height: 100vh;
+	background-color: #E0E0E0;
+	display: flex;
+	flex-direction: column;
+	/*Colores*/
+	--rojo:#d50000;
+	--verde:#00c853;
+	--azul:#2196f3;
+	--gris:#263238;
+	/*Colores de categoria*/
+	--musica:#e57373;
+	--deporte:#ffb74d;
+	--historia:#fff176;
+	--gastronomia:#ba68c8;
+	--geografia:#64b5f6;
+
+	--fondo:#F5F5F5;
+	/*Texto blanco*/
+	--tpClaro:rgba(255, 255, 255, 1);
+	--tsClaro:rgba(255, 255, 255, 0.7);
+	--iClaro: rgba(255, 255, 255, 0.3);
+
+	/*Texto negro*/
+	--tpOscuro:rgba(0, 0, 0, 0.87);
+	--tsOscuro:rgba(0, 0, 0, 0.54);
+	--iOscuro: rgba(0, 0, 0, 0.26);
+	--division:rgba(0, 0, 0, 0.12);
+}
+
+.barra-informativa {
+	width: 100%;
+	height: 50px;
+	flex-grow: 0;
+	background-color:var(--gris);
+	display: flex;
+	justify-content: space-around;
+	color: rgba(255, 255, 255, 1);
+}
+
+.barra-informativa div {
+	padding: 0 10px;
+	text-align: center;
+	font-size: 0.8em;
+	margin-top: 10px;
+}
+
+.barra-informativa span { color: rgba(255, 255, 255, 0.6); }
+
+.portada {
+	height: 200px;
+	width: 100%;
+	background-color: var(--verde);
+	flex-grow: 0;
+}
+
+main {
+	width: 100%;
+	max-width: 700px;
+	height: 100%;
+	background-color: transparent;
+	margin: 0 auto;
+	overflow: hidden;
+	flex-grow: 1;
+	margin-top: -160px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.cont-principal {
+	flex-grow: 1;
+	width: 500%;
+	height: 100%;
+	display: flex;
+	align-items: stretch;
+
+	margin-left: 0; /*Mover contenedor*/
+	margin-bottom: 15px;
+}
+
+.cont-principal section {
+	width: 100%;
+	border-radius: 2px;
+	margin: 0 15px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	background-color: #F5F5F5;
+}
+
+.mensaje-intro { text-align: center; }
+
+ .texto-bienvenida {
+ 	font-size: 24px;
+ 	color: var(--tpOscuro);
+ }
+
+ .nombre-juego {
+ 	font-size: 30px;
+ 	font-weight: bold;
+ 	color: var(--verde);
+ }
+
+ .mensaje-intro p {
+ 	font-size: 16px;
+	color: var(--tsOscuro);
+ }
+
+ label {
+ 	font-size: 16px;
+ 	color: var(--tpOscuro);
+}
+
+label, .validacion, #nombreJugador {
+	margin-top:10px; 
+	display: block;
+	width: 100%;
+}
+
+#nombreJugador {
+	font-size: 16px;
+	color: var(--tpOscuro);
+	border: 2px solid var(--division);
+	border-radius: 2px;
+	padding:8px;
+	margin: 5px 0;
+	font-family: 'Bangers', cursive;
+}
+
+.validacion {
+	margin: 5px 0 15px 0;
+	font-size: 14px;
+	color: var(--rojo);
+	visibility: hidden;
+}
+
+#registrar { margin-left: 50%; transform: translateX(-50%);}
+
+.c-botones {
+	width: 50%;
+	height: 40px;
+	background-color: var(--azul);
+	color: #fff;
+	border: none;
+	padding: 10px;
+	border-radius: 3px;
+	box-shadow: 0 1px 5px rgba(0,0,0,.4); /*Sombra leve*/
+	cursor: pointer;
+	font-family: 'Bangers', cursive;
+}
+
+.c-botones:hover { box-shadow: 0 4px 6px rgba(0,0,0,.4); }
+
+.mensaje-intro, .datos {
+	padding:10px;
+	width: 100%;
+	height: 50%;
+
+}
+.mensaje-intro p { text-align: justify; }
+
+.cont-categorias, .cont-boton  { width: 100%; display: flex; }
+
+.cont-categorias { height: 60%; position: relative; }
+
+.cont-boton {
+	height: 40%;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0;
+	background-color: var(--fondo);
+}
+
+.categorias	{
+	width: 100%;
+	height: 100%;
+	font-family: 'Bangers', cursive;
+	font-size: 36px;
+}
+
+.flecha {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 20%;
+	width: 20%;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	color: var(--tsOscuro);
+	font-size: 30px;
+	opacity: 0;
+}
+
+.flecha img {
+	width: 100%;
+	height: 100%;
+}
+
+.categorias i {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	font-size: 34px;
+}
+
+li {
+	position: relative;
+	overflow-y: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20%;	
+	color: var(--tsOscuro);
+}
+
+.cat-seleccion i {
+	font-size: 30px;
+}
+
+.musica, .cat-1 { background-color: var(--musica); }
+.deporte, .cat-2 { background-color: var(--deporte); }
+.historia, .cat-3 { background-color: var(--historia); }
+.gastronomia, .cat-4 { background-color: var(--gastronomia); }
+.geografia, .cat-5 { background-color: var(--geografia); }
+
+#btnPrincipal {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	font-size: 24px;
+	font-family: 'Bangers', cursive;
+	background-color: var(--verde);
+	color: var(--tpClaro);
+	border:none;
+	box-shadow: 0 1px 5px rgba(0,0,0,.4); /*Sombra leve*/
+}
+
+@media screen and (min-width: 600px) {
+	.categorias i {
+		top: 10px;
+		left: -12px;
+		font-size: 60px;
+	}
+
+	#btnPrincipal {
+		font-size: 28px;
+		width: 150px;
+		height: 150px;
+	}
+}
+
+.cont-preg-SM, .cont-preg-VF {
+	display: flex;
+	flex-direction: column;
+}
+.cat-etiqueta {
+	padding: 10px;
+	text-align: center;
+	font-size: 30px;
+	color: var(--tpOscuro);
+}
+.pregunta-SM, .pregunta-VF {
+	color: var(--tpOscuro); 
+	font-size: 20px;
+	padding:10px;
+}
+.opciones {
+
+}
+.opciones label {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	/*background-color:rgba(0, 0, 0, 0.1);*/
+	padding: 8px 10px;
+	color: var(--tsOscuro);
+}
+label input {
+	margin-right: 10px;
+}
+label i {
+	font-size: 18px;
+	margin-left: auto;
+	color: var(--verde);
+	opacity: 0;
+}
+.btnComprobacion {
+	background-color: var(--verde);
+	margin: auto;
+}
+.cont-preg-VF {
+
+}
+
+.cont-resultados {
+}
+
+ul { list-style: none; }
+
+/*Seccion de resultados*/
+.cont-resultados { 
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.resultados {
+	flex-grow: 1;
+	height: 60%;
+	padding: 10px;
+}
+
+.estadisticas { display: flex; }
+.titulo-nombre {
+	display: block;
+	font-size: 18px;
+	color: var(--tsOscuro);
+}
+
+.msj-resultado {
+	display: block;
+	font-size: 30px;
+	color: var(--tsOscuro);
+}
+
+.puntaje-obtenido  {
+	display: block;
+	font-size: 60px;
+	color: var(--tpOscuro);
+}
+
+.puntaje-obtenido span { font-size: 60px; }
+
+.msj-ganaste { font-size: 40px; color: var(--verde); }
+
+.cont-estrellas {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0;
+	font-size: 40px;
+	color: yellow;
+}
+
+.cont-estrellas i { text-shadow: 1px 1px  2px black; }
+
+.cont-correctas, .cont-incorrectas {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+	padding-top: 10px;
+}
+
+.estadisticas span { font-size: 18px; color: var(--tsOscuro); }
+
+.estadisticas output { font-size: 80px; color: var(--tpOscuro); }
+
+.estadisticas .correctas { color: var(--verde); }
+.estadisticas .incorrectas { color: var(--rojo); }
+
+
+

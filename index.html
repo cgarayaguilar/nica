@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>nica-pregunta</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	<link href="https://file.myfontastic.com/5dBVVrYhAG6Xy5x7DLKAMK/icons.css" rel="stylesheet">
+	<!--<link rel="stylesheet" href="css/iconos.css">-->
+	<!--<link href="https://fonts.googleapis.com/css?family=Anton|Bangers|Roboto|Yanone+Kaffeesatz" rel="stylesheet">-->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/pregMusica.js"></script>	
+	<script src="js/pregDeporte.js"></script>
+	<script src="js/pregHistoria.js"></script>	
+	<script src="js/pregGastronomia.js"></script>
+	<script src="js/pregGeografia.js"></script>			
+	<script src="js/script.js"></script>
+
+</head>
+<body>
+	<header class="barra-informativa">
+		<div class="jugador">
+			<span>Jugador</span>
+			<h2 id="jugador"></h2>
+		</div>
+		<div class="intentos">
+			<span>Intentos</span>
+			<h2><output  id="intentos">0</output>/10</h2>
+		</div>
+		<div class="puntos">
+			<span>Puntos</span>
+			<h2><output id="puntos" >0</output>/100</h2>
+		</div>
+	</header>
+
+	<div class="portada"></div>
+
+	<main>
+		<div class="cont-principal">
+
+			<section class="cont-bienvenida">
+				<div class="mensaje-intro">
+					<h3 class="texto-bienvenida">Bienvenidos a:</h3>
+					<h1 class="nombre-juego">PREGUNTA NICA</h1>
+					<p> Este es un divertido juego en el cual se pondra a prueba que tanto conoces a Nicaragua, atravez de una serie de preguntas de diferentes categorias.</p>
+				</div>
+				
+				<div class="datos">
+					<label for="nombreJugador">Ingrese su nombre</label>
+					<input type="text" id="nombreJugador"  autocomplete="off">
+					<span class="validacion">Nombre entre 3 y 10 caracteres.</span>
+					<input type="button" value="Empezar" id="registrar" class="c-botones" autofocus>	
+				</div>
+			</section>
+
+			<!--Contenedor principal de juego-->
+			<section class="cont-jugar">
+				<div class="cont-categorias">
+					<ul class="categorias">
+						<li class="musica"><i class="icon-musica"></i>Musica</li>
+						<li class="deporte"><i class="icon-deporte"></i>Deporte</li>
+						<li class="historia"><i class="icon-historia"></i>Historia</li>
+						<li class="gastronomia"><i class="icon-comida"></i>Gastronomia</li>
+						<li class="geografia"><i class="icon-geografia"></i>Geografia</li>
+					</ul>
+					<!--<div class="flecha"><i class="icon-flecha4" ></i></div>-->
+					<div class="flecha"><img src="img/mano.svg" alt="mano"></div>
+				</div>
+				<div class="cont-boton">
+					<input type="button" value="JUGAR" id="btnPrincipal">
+				</div>
+			</section>
+			
+			<section class="cont-preg-SM">
+				<h2 class="cat-etiqueta">Gastronomia</h2>
+				<output class="pregunta-SM"></output>
+				<div class="opciones">
+					<label for="opcion1" class="opcion1"></label>
+					<label for="opcion2" class="opcion2"></label>
+					<label for="opcion3" class="opcion3"></label>
+					<label for="opcion4" class="opcion4"></label>
+				</div>
+				<input type="button" value="Comprobar" class="c-botones btnComprobacion">	
+			</section>
+			<section class="cont-preg-VF">
+				<h2 class="cat-etiqueta"></h2>
+				<output class="pregunta-VF"></output>
+				<div class="opciones">
+					<label for="verdadero" class="verdadero"><input type="radio" id="verdadero" name="opcion" checked="false"> Verdadero <i class="icon-correcto2"></i></label>
+					<label for="falso" class="falso"><input type="radio" id="falso" name="opcion" checked="false"> Falso <i class="icon-correcto2"></i></label>
+				</div>
+				<input type="button" value="Comprobar" class="c-botones btnComprobacion">	
+			</section>
+			<section class="cont-resultados">
+				<div class="resultados">
+					<span class="titulo-nombre"><output class="nombre-ganador"></output> has obtenido un resultado de</span>
+					<output class="puntaje-obtenido"> <span>pts</span></output>
+					<output class="msj-ganaste">GANASTE</output>
+					
+					<div class="cont-estrellas">
+						<i class="icon-estrella est-1"></i>
+						<i class="icon-estrella est-2"></i>
+						<i class="icon-estrella est-3"></i>
+					</div>
+					<span class="msj-resultado"></span>
+				</div>
+				
+				<div class="estadisticas">
+					<div class="cont-correctas">
+						<span>Correctas</span>
+						<output class="correctas"></output>
+					</div>
+					<div class="cont-incorrectas">
+						<span>Incorrectas</span>
+						<output class="incorrectas"></output>
+					</div>
+				</div>
+
+			</section>
+			
+		</div>
+	</main>
+
+</body>
+</html>

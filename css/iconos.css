@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "pregunta-nica";
+  src:url("../fonts/pregunta-nica.eot");
+  src:url("../fonts/pregunta-nica.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/pregunta-nica.woff") format("woff"),
+    url("../fonts/pregunta-nica.ttf") format("truetype"),
+    url("../fonts/pregunta-nica.svg#pregunta-nica") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "pregunta-nica" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "pregunta-nica" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-comida:before {
+  content: "\61";
+}
+.icon-deporte:before {
+  content: "\62";
+}
+.icon-geografia:before {
+  content: "\63";
+}
+.icon-musica:before {
+  content: "\64";
+}
+.icon-arrancar:before {
+  content: "\65";
+}
+.icon-correcto:before {
+  content: "\66";
+}
+.icon-asterisco:before {
+  content: "\67";
+}
+.icon-incorrecto:before {
+  content: "\68";
+}
+.icon-historia:before {
+  content: "\69";
+}
+.icon-flecha1:before {
+  content: "\6a";
+}
+.icon-flecha2:before {
+  content: "\6b";
+}
+.icon-flecha3:before {
+  content: "\6c";
+}
+.icon-flecha4:before {
+  content: "\6d";
+}
+.icon-flecha5:before {
+  content: "\6e";
+}
+.icon-flecha6:before {
+  content: "\6f";
+}
+.icon-flecha7:before {
+  content: "\70";
+}
+.icon-correcto2:before {
+  content: "\71";
+}
+.icon-incorrecto2:before {
+  content: "\72";
+}
+.icon-error:before {
+  content: "\73";
+}
+.icon-play:before {
+  content: "\74";
+}
+.icon-arrow-right:before {
+  content: "\75";
+}
+.icon-arrow-left:before {
+  content: "\76";
+}
+.icon-arrow-down:before {
+  content: "\77";
+}
+.icon-arrow-up:before {
+  content: "\78";
+}
